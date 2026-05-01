@@ -13,6 +13,7 @@ x-airflow-common: &airflow-common
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - ./data:/opt/airflow/data
+    - ../p1-airbnb-data-quality/data/processed:/opt/airflow/data/processed
   depends_on:
     postgres:
       condition: service_healthy
