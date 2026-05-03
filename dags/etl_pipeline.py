@@ -5,6 +5,7 @@ import requests
 import pandas as pd
 from pathlib import Path
 from sqlalchemy import create_engine
+from sqlalchemy import text
 
 # ── argumentos por defecto para todas las tareas ──────────────────
 default_args = {
@@ -32,7 +33,7 @@ def extract_clima():
         "?latitude=-34.6037&longitude=-58.3816"
         "&daily=temperature_2m_max,temperature_2m_min,precipitation_sum"
         "&timezone=America/Argentina/Buenos_Aires"
-        "&past_days=30"
+        "&past_days=92"
     )
     response = requests.get(url, timeout=30)
     response.raise_for_status()
@@ -48,19 +49,22 @@ def extract_clima():
     
 def extract_bcra():
     """Extrae tipo de cambio USD/ARS desde Bluelytics API."""
-    url = "https://api.bluelytics.com.ar/v2/latest"
+    url = "https://api.bluelytics.com.ar/v2/evolution.json?days=180"
     response = requests.get(url, timeout=30)
     response.raise_for_status()
     data = response.json()
-    df = pd.DataFrame([{
-        "fecha": data["last_update"],
-        "usd_oficial_compra": data["oficial"]["value_buy"],
-        "usd_oficial_venta": data["oficial"]["value_sell"],
-        "usd_blue_compra": data["blue"]["value_buy"],
-        "usd_blue_venta": data["blue"]["value_sell"],
-    }])
-    df.to_csv(DATA_RAW / "tipo_cambio.csv", index=False)
-    print(f"BCRA: tipo de cambio extraído — oficial {data['oficial']['value_avg']} ARS")
+    df = pd.DataFrame(data)
+    
+    oficial = df[df["source"] == "Oficial"][["date", "value_sell", "value_buy"]].rename(
+        columns={"value_sell": "usd_oficial_venta", "value_buy": "usd_oficial_compra"}
+        )
+    blue = df[df["source"] == "Blue"][["date", "value_sell", "value_buy"]].rename(
+        columns={"value_sell": "usd_blue_venta", "value_buy": "usd_blue_compra"}
+        )
+    
+    df_final = oficial.merge(blue, on="date")
+    df_final.to_csv(DATA_RAW / "tipo_cambio.csv", index=False)
+    print(f"BCRA: {len(df_final)} dias de tipo de cambio extraidos")
 
 def load_to_postgres():
     """Carga los CSVs de data/raw/ a tablas en PostgreSQL"""
@@ -76,7 +80,10 @@ def load_to_postgres():
     
     for tabla,path in tablas.items():
         df = pd.read_csv(path)
-        df.to_sql(tabla, engine, if_exists="replace", index=False)
+        # eliminar tabla con CASCADE para borrar vistas dependientes
+        with engine.connect() as conn:
+            conn.execute(text(f"DROP TABLE IF EXISTS {tabla} CASCADE"))
+        df.to_sql(tabla, engine, if_exists="replace", index=False)    
         print(f"{tabla}: {len(df)} filas cargadas a PostgreSQL")
 
 # ── definición del DAG ────────────────────────────────────────────
