@@ -1,0 +1,93 @@
+[0m15:56:55.792659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e028d5210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e0056cdc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e0056cd60>]}
+
+
+============================== 15:56:55.799498 | f620d383-5a72-4f4f-9e24-6139a175e07f ==============================
+[0m15:56:55.799498 [info ] [MainThread]: Running with dbt=1.7.0
+[0m15:56:55.800618 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/root/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt init airbnb_pipeline', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:56:55.802171 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/root/.dbt')}
+[0m15:56:55.802860 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m15:56:55.805523 [debug] [MainThread]: Starter project path: /usr/local/lib/python3.10/site-packages/dbt/include/starter_project
+[0m15:56:55.931949 [info ] [MainThread]: 
+Your new dbt project "airbnb_pipeline" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:56:55.933215 [info ] [MainThread]: Setting up your profile.
+[0m15:58:42.816877 [error] [MainThread]: Encountered an error:
+
+[0m15:58:42.820213 [error] [MainThread]: Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/dbt/cli/requires.py", line 90, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/dbt/cli/requires.py", line 75, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/dbt/cli/main.py", line 515, in init
+    results = task.run()
+  File "/usr/local/lib/python3.10/site-packages/dbt/task/init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "/usr/local/lib/python3.10/site-packages/dbt/task/init.py", line 263, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+  File "/usr/local/lib/python3.10/site-packages/dbt/task/init.py", line 244, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+  File "/usr/local/lib/python3.10/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/usr/local/lib/python3.10/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m15:58:42.823329 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 107.04087, "process_user_time": 1.791616, "process_kernel_time": 0.412675, "process_mem_max_rss": "92244", "process_out_blocks": "608", "command_success": false, "process_in_blocks": "0"}
+[0m15:58:42.825223 [debug] [MainThread]: Command `dbt init` failed at 15:58:42.824932 after 107.04 seconds
+[0m15:58:42.826305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e028d5210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e005d6f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e005d7190>]}
+[0m15:58:42.827387 [debug] [MainThread]: Flushing usage events
+[0m16:11:45.477484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f42c330fc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f42c1184a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f42c11849d0>]}
+
+
+============================== 16:11:45.485026 | c9e7c4b7-0838-4700-837f-feef18f52311 ==============================
+[0m16:11:45.485026 [info ] [MainThread]: Running with dbt=1.7.0
+[0m16:11:45.485954 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/root/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt init airbnb_pipeline', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:11:45.487045 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/root/.dbt')}
+[0m16:11:45.488075 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m16:11:45.491026 [info ] [MainThread]: A project called airbnb_pipeline already exists here.
+[0m16:11:45.492730 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.021047562, "process_user_time": 1.670027, "process_kernel_time": 0.400006, "process_mem_max_rss": "92040", "process_out_blocks": "608", "process_in_blocks": "0"}
+[0m16:11:45.493680 [debug] [MainThread]: Command `dbt init` succeeded at 16:11:45.493545 after 0.02 seconds
+[0m16:11:45.494361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f42c330fc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f42c557ec80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f42c0ff6b00>]}
+[0m16:11:45.495006 [debug] [MainThread]: Flushing usage events
+[0m16:12:31.882065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0015177340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0013050820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0013050760>]}
+
+
+============================== 16:12:31.885167 | d1327b84-491b-46f3-a524-2412df580081 ==============================
+[0m16:12:31.885167 [info ] [MainThread]: Running with dbt=1.7.0
+[0m16:12:31.886238 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt init airbnb_pipeline', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:12:31.888167 [debug] [MainThread]: Starter project path: /usr/local/lib/python3.10/site-packages/dbt/include/starter_project
+[0m16:12:32.002486 [info ] [MainThread]: 
+Your new dbt project "airbnb_pipeline" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:12:32.003758 [info ] [MainThread]: Setting up your profile.
+[0m16:12:35.016657 [info ] [MainThread]: Profile airbnb_pipeline written to /root/.dbt/profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m16:12:35.018352 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 3.1434944, "process_user_time": 1.580415, "process_kernel_time": 0.098775, "process_mem_max_rss": "94740", "process_out_blocks": "8", "process_in_blocks": "0"}
+[0m16:12:35.019689 [debug] [MainThread]: Command `dbt init` succeeded at 16:12:35.019546 after 3.14 seconds
+[0m16:12:35.020795 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0015177340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f001741f100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0013050b20>]}
+[0m16:12:35.021589 [debug] [MainThread]: Flushing usage events

@@ -22,6 +22,7 @@ def extract_airbnb():
     origen = Path("/opt/airflow/data/processed/listings_clean.csv")
     destino = DATA_RAW / "listings_clean.csv"
     shutil.copy(origen,destino)
+    print(f"Airbnb: {destino} copiado correctamente")
 
 def extract_clima():
     """Extrae datos de clima de Buenos Aires desde Open-Meteo API."""
