@@ -1,5 +1,0 @@
-echo "logs/" >> .gitignore
-echo "*.pyc" >> .gitignore
-echo "__pycache__/" >> .gitignore
-echo ".env" >> .gitignore
-echo "data/raw/" >> .gitignore

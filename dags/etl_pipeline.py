@@ -81,7 +81,7 @@ def load_to_postgres():
     for tabla,path in tablas.items():
         df = pd.read_csv(path)
         # eliminar tabla con CASCADE para borrar vistas dependientes
-        with engine.connect() as conn:
+        with engine.begin() as conn:
             conn.execute(text(f"DROP TABLE IF EXISTS {tabla} CASCADE"))
         df.to_sql(tabla, engine, if_exists="replace", index=False)    
         print(f"{tabla}: {len(df)} filas cargadas a PostgreSQL")
