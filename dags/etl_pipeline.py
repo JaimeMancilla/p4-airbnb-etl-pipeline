@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import requests
 import pandas as pd
 from pathlib import Path
+from sqlalchemy import create_engine
 
 # ── argumentos por defecto para todas las tareas ──────────────────
 default_args = {
@@ -60,7 +61,23 @@ def extract_bcra():
     }])
     df.to_csv(DATA_RAW / "tipo_cambio.csv", index=False)
     print(f"BCRA: tipo de cambio extraído — oficial {data['oficial']['value_avg']} ARS")
+
+def load_to_postgres():
+    """Carga los CSVs de data/raw/ a tablas en PostgreSQL"""
+    engine = create_engine(
+        "postgresql+psycopg2://airflow:airflow@postgres/airflow"
+    )
     
+    tablas = {
+        "listings": DATA_RAW / "listings_clean.csv",
+        "clima": DATA_RAW / "clima_buenos_aires.csv",
+        "tipo_cambio": DATA_RAW / "tipo_cambio.csv",
+    }
+    
+    for tabla,path in tablas.items():
+        df = pd.read_csv(path)
+        df.to_sql(tabla, engine, if_exists="replace", index=False)
+        print(f"{tabla}: {len(df)} filas cargadas a PostgreSQL")
 
 # ── definición del DAG ────────────────────────────────────────────
 with DAG (
@@ -88,4 +105,9 @@ with DAG (
         python_callable = extract_bcra,
     )
     
-    [t_extract_airbnb, t_extract_clima, t_extract_bcra]
+    t_load_postgres = PythonOperator(
+        task_id = "load_to_postgres",
+        python_callable = load_to_postgres,
+    )
+    
+    [t_extract_airbnb, t_extract_clima, t_extract_bcra] >> t_load_postgres

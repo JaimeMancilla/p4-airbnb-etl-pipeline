@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: public
+    tables:
+      - name: listings
+      - name: clima
+      - name: tipo_cambio
