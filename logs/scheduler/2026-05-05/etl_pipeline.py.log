@@ -1,0 +1,91 @@
+[2026-05-05T01:18:45.713+0000] {processor.py:161} INFO - Started process (PID=190) to work on /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:18:45.715+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2026-05-05T01:18:45.715+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:18:45.715+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:18:46.164+0000] {processor.py:840} INFO - DAG(s) 'etl_airbnb_pipeline' retrieved from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:18:46.192+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:18:46.192+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-05-05T01:18:46.212+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:18:46.212+0000] {dag.py:3823} INFO - Setting next_dagrun for etl_airbnb_pipeline to 2026-05-05 00:00:00+00:00, run_after=2026-05-06 00:00:00+00:00
+[2026-05-05T01:18:46.240+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.529 seconds
+[2026-05-05T01:19:16.508+0000] {processor.py:161} INFO - Started process (PID=209) to work on /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:19:16.509+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2026-05-05T01:19:16.510+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:19:16.510+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:19:16.706+0000] {processor.py:840} INFO - DAG(s) 'etl_airbnb_pipeline' retrieved from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:19:16.900+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:19:16.899+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-05-05T01:19:16.914+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:19:16.914+0000] {dag.py:3823} INFO - Setting next_dagrun for etl_airbnb_pipeline to 2026-05-05 00:00:00+00:00, run_after=2026-05-06 00:00:00+00:00
+[2026-05-05T01:19:16.930+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.424 seconds
+[2026-05-05T01:19:47.163+0000] {processor.py:161} INFO - Started process (PID=215) to work on /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:19:47.164+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2026-05-05T01:19:47.165+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:19:47.165+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:19:47.378+0000] {processor.py:840} INFO - DAG(s) 'etl_airbnb_pipeline' retrieved from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:19:47.401+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:19:47.400+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-05-05T01:19:47.420+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:19:47.420+0000] {dag.py:3823} INFO - Setting next_dagrun for etl_airbnb_pipeline to 2026-05-05 00:00:00+00:00, run_after=2026-05-06 00:00:00+00:00
+[2026-05-05T01:19:47.438+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.277 seconds
+[2026-05-05T01:20:17.622+0000] {processor.py:161} INFO - Started process (PID=221) to work on /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:20:17.623+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2026-05-05T01:20:17.624+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:20:17.624+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:20:17.848+0000] {processor.py:840} INFO - DAG(s) 'etl_airbnb_pipeline' retrieved from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:20:17.878+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:20:17.878+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-05-05T01:20:17.898+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:20:17.897+0000] {dag.py:3823} INFO - Setting next_dagrun for etl_airbnb_pipeline to 2026-05-05 00:00:00+00:00, run_after=2026-05-06 00:00:00+00:00
+[2026-05-05T01:20:17.915+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.295 seconds
+[2026-05-05T01:20:48.159+0000] {processor.py:161} INFO - Started process (PID=227) to work on /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:20:48.160+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2026-05-05T01:20:48.161+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:20:48.161+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:20:48.380+0000] {processor.py:840} INFO - DAG(s) 'etl_airbnb_pipeline' retrieved from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:20:48.405+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:20:48.404+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-05-05T01:20:48.426+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:20:48.425+0000] {dag.py:3823} INFO - Setting next_dagrun for etl_airbnb_pipeline to 2026-05-05 00:00:00+00:00, run_after=2026-05-06 00:00:00+00:00
+[2026-05-05T01:20:48.447+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.292 seconds
+[2026-05-05T01:21:18.643+0000] {processor.py:161} INFO - Started process (PID=233) to work on /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:21:18.645+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2026-05-05T01:21:18.646+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:21:18.646+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:21:18.885+0000] {processor.py:840} INFO - DAG(s) 'etl_airbnb_pipeline' retrieved from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:21:18.922+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:21:18.921+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-05-05T01:21:18.943+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:21:18.943+0000] {dag.py:3823} INFO - Setting next_dagrun for etl_airbnb_pipeline to 2026-05-05 00:00:00+00:00, run_after=2026-05-06 00:00:00+00:00
+[2026-05-05T01:21:18.962+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.324 seconds
+[2026-05-05T01:21:49.144+0000] {processor.py:161} INFO - Started process (PID=239) to work on /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:21:49.145+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2026-05-05T01:21:49.145+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:21:49.145+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:21:49.361+0000] {processor.py:840} INFO - DAG(s) 'etl_airbnb_pipeline' retrieved from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:21:49.385+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:21:49.385+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-05-05T01:21:49.403+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:21:49.403+0000] {dag.py:3823} INFO - Setting next_dagrun for etl_airbnb_pipeline to 2026-05-05 00:00:00+00:00, run_after=2026-05-06 00:00:00+00:00
+[2026-05-05T01:21:49.423+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.283 seconds
+[2026-05-05T01:22:19.663+0000] {processor.py:161} INFO - Started process (PID=245) to work on /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:22:19.664+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2026-05-05T01:22:19.666+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:22:19.665+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:22:19.923+0000] {processor.py:840} INFO - DAG(s) 'etl_airbnb_pipeline' retrieved from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:22:19.952+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:22:19.952+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-05-05T01:22:19.976+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:22:19.976+0000] {dag.py:3823} INFO - Setting next_dagrun for etl_airbnb_pipeline to 2026-05-05 00:00:00+00:00, run_after=2026-05-06 00:00:00+00:00
+[2026-05-05T01:22:19.996+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.337 seconds
+[2026-05-05T01:22:50.188+0000] {processor.py:161} INFO - Started process (PID=251) to work on /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:22:50.189+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2026-05-05T01:22:50.191+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:22:50.190+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:22:50.456+0000] {processor.py:840} INFO - DAG(s) 'etl_airbnb_pipeline' retrieved from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:22:50.486+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:22:50.486+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-05-05T01:22:50.510+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:22:50.509+0000] {dag.py:3823} INFO - Setting next_dagrun for etl_airbnb_pipeline to 2026-05-05 00:00:00+00:00, run_after=2026-05-06 00:00:00+00:00
+[2026-05-05T01:22:50.529+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.344 seconds
+[2026-05-05T01:23:20.751+0000] {processor.py:161} INFO - Started process (PID=257) to work on /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:23:20.752+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2026-05-05T01:23:20.753+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:23:20.752+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:23:20.950+0000] {processor.py:840} INFO - DAG(s) 'etl_airbnb_pipeline' retrieved from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:23:20.971+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:23:20.971+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-05-05T01:23:20.987+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:23:20.987+0000] {dag.py:3823} INFO - Setting next_dagrun for etl_airbnb_pipeline to 2026-05-05 00:00:00+00:00, run_after=2026-05-06 00:00:00+00:00
+[2026-05-05T01:23:21.004+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.256 seconds
+[2026-05-05T01:23:51.212+0000] {processor.py:161} INFO - Started process (PID=263) to work on /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:23:51.213+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2026-05-05T01:23:51.214+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:23:51.214+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:23:51.442+0000] {processor.py:840} INFO - DAG(s) 'etl_airbnb_pipeline' retrieved from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:23:51.467+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:23:51.467+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-05-05T01:23:51.485+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:23:51.484+0000] {dag.py:3823} INFO - Setting next_dagrun for etl_airbnb_pipeline to 2026-05-05 00:00:00+00:00, run_after=2026-05-06 00:00:00+00:00
+[2026-05-05T01:23:51.503+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.294 seconds
+[2026-05-05T01:24:21.738+0000] {processor.py:161} INFO - Started process (PID=269) to work on /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:24:21.740+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2026-05-05T01:24:21.741+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:24:21.741+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:24:22.014+0000] {processor.py:840} INFO - DAG(s) 'etl_airbnb_pipeline' retrieved from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:24:22.055+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:24:22.054+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-05-05T01:24:22.090+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:24:22.090+0000] {dag.py:3823} INFO - Setting next_dagrun for etl_airbnb_pipeline to 2026-05-05 00:00:00+00:00, run_after=2026-05-06 00:00:00+00:00
+[2026-05-05T01:24:22.114+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.381 seconds
+[2026-05-05T01:24:52.327+0000] {processor.py:161} INFO - Started process (PID=275) to work on /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:24:52.328+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_pipeline.py for tasks to queue
+[2026-05-05T01:24:52.329+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:24:52.329+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:24:52.554+0000] {processor.py:840} INFO - DAG(s) 'etl_airbnb_pipeline' retrieved from /opt/airflow/dags/etl_pipeline.py
+[2026-05-05T01:24:52.580+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:24:52.580+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2026-05-05T01:24:52.601+0000] {logging_mixin.py:188} INFO - [2026-05-05T01:24:52.601+0000] {dag.py:3823} INFO - Setting next_dagrun for etl_airbnb_pipeline to 2026-05-05 00:00:00+00:00, run_after=2026-05-06 00:00:00+00:00
+[2026-05-05T01:24:52.623+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_pipeline.py took 0.300 seconds
