@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: listings_clean
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: neighbourhood_cleansed
+        tests:
+          - not_null
+      - name: room_type
+        tests:
+          - not_null
+          - accepted_values:
+              values: 
+                - 'Entire home/apt'
+                - 'Private room'
+                - 'Shared room'
+                - 'Hotel room'
+      - name: review_scores_rating
+        tests:
+          - not_null:
+              config:
+                severity: warn
+
+  - name: clima_clean
+    columns:
+      - name: fecha
+        tests:
+          - not_null
+          - unique
+
+  - name: tipo_cambio_clean
+    columns:
+      - name: fecha
+        tests:
+          - not_null
+          - unique
