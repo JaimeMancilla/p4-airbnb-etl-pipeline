@@ -1,0 +1,28 @@
+[2026-05-04T00:44:34.792+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_airbnb_pipeline.extract_airbnb scheduled__2026-05-03T00:00:00+00:00 [queued]>
+[2026-05-04T00:44:34.799+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_airbnb_pipeline.extract_airbnb scheduled__2026-05-03T00:00:00+00:00 [queued]>
+[2026-05-04T00:44:34.799+0000] {taskinstance.py:2170} INFO - Starting attempt 3 of 3
+[2026-05-04T00:44:34.816+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): extract_airbnb> on 2026-05-03 00:00:00+00:00
+[2026-05-04T00:44:34.822+0000] {standard_task_runner.py:60} INFO - Started process 487 to run task
+[2026-05-04T00:44:34.829+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_airbnb_pipeline', 'extract_airbnb', 'scheduled__2026-05-03T00:00:00+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmpgs_mt9c3']
+[2026-05-04T00:44:34.832+0000] {standard_task_runner.py:88} INFO - Job 21: Subtask extract_airbnb
+[2026-05-04T00:44:34.894+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_airbnb_pipeline.extract_airbnb scheduled__2026-05-03T00:00:00+00:00 [running]> on host f42022256ec2
+[2026-05-04T00:44:35.160+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='jaime' AIRFLOW_CTX_DAG_ID='etl_airbnb_pipeline' AIRFLOW_CTX_TASK_ID='extract_airbnb' AIRFLOW_CTX_EXECUTION_DATE='2026-05-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-03T00:00:00+00:00'
+[2026-05-04T00:44:35.165+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/etl_pipeline.py", line 26, in extract_airbnb
+    shutil.copy(origen,destino)
+  File "/usr/local/lib/python3.8/shutil.py", line 418, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/local/lib/python3.8/shutil.py", line 264, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/processed/listings_clean.csv'
+[2026-05-04T00:44:35.175+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=etl_airbnb_pipeline, task_id=extract_airbnb, execution_date=20260503T000000, start_date=20260504T004434, end_date=20260504T004435
+[2026-05-04T00:44:35.195+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 21 for task extract_airbnb ([Errno 2] No such file or directory: '/opt/airflow/data/processed/listings_clean.csv'; 487)
+[2026-05-04T00:44:35.247+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-05-04T00:44:35.272+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

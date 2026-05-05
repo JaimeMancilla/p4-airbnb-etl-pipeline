@@ -23,7 +23,7 @@ def extract_airbnb():
     import shutil
     origen = Path("/opt/airflow/data/processed/listings_clean.csv")
     destino = DATA_RAW / "listings_clean.csv"
-    shutil.copy(origen,destino)
+    shutil.copyfile(origen,destino)
     print(f"Airbnb: {destino} copiado correctamente")
 
 def extract_clima():
