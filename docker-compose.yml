@@ -67,6 +67,16 @@ services:
     - ./dbt/profiles.yml:/root/.dbt/profiles.yml
     working_dir: /usr/app/dbt
     entrypoint: ["tail", "-f", "/dev/null"]
+  
+  jupyter:
+    image: jupyter/pyspark-notebook:latest
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/notebooks
+      - ./data:/home/jovyan/data
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
 
 volumes:
   postgres_data:
